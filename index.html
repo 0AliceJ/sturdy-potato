@@ -3,6 +3,7 @@
     <!--This is a comment :(-->
     <head>
         <title>My Cool Website</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
         <style>
             img {
                 width: 600px;
@@ -26,6 +27,7 @@
                 width: 25%;
 
             }
+
         </style>
     </head>
     <body>
@@ -34,14 +36,18 @@
         <p>I think HTML is neat!</p>
         
         <img src="https://static.vecteezy.com/system/resources/previews/024/646/930/non_2x/ai-generated-stray-cat-in-danger-background-animal-background-photo.jpg">
+        
+        <!--EduTools pop-up-->
         <div class="rightToolbox" id="eduTools">
             <iframe src="https://www.wordreference.com"></iframe>
             <iframe src="https://www.desmos.com/calculator"></iframe>
         </div>
 
+        <!--Quotes section-->
         <blockquote>"Breathe air." - Anon.</blockquote>
         <button onclick="changeQuote()">Change Quote</button>
 
+        <!--Take a break pop-up-->
         <div class="break-modal" id = "break-modal">
             <h2>"Hey! You've been working for a while now.</h2>
             <h2>Don't forget to drink some water and fix your posture!";</h2>
@@ -51,9 +57,12 @@
         <input type = "number" id = "break-interval">
         <button onclick="takeBreak()"> confirm </button>
 
-        <script src="script.js">
-            var index = 0;
-
+        <!--Import take a break script-->
+        <script src="script.js"></script>
+        <!--Run other script here-->
+        <script> 
+            /* This is a javascript comment */
+            /* EduTools toggle */
             function showTools() {
                 var toolbox = document.getElementById("eduTools")
                 if (toolbox.style.display === "none") {
@@ -62,6 +71,9 @@
                     toolbox.style.display = "none"
                 }
             }
+
+            /* Quote changes */
+            var index = 0;
             function changeQuote() {
                 var quotes = [
                     `"Don't breathe air." -Anon.`,
