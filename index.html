@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
+    <!--This is a comment :(-->
     <head>
         <title>My Cool Website</title>
         <style>
             img {
                 width: 600px;
                 height: auto;
+            }
+
+            h1 {
+                color: red;
             }
         </style>
     </head>
@@ -14,5 +19,32 @@
         <p>I think HTML is neat!</p>
 
         <img src="https://static.vecteezy.com/system/resources/previews/024/646/930/non_2x/ai-generated-stray-cat-in-danger-background-animal-background-photo.jpg">
+
+        <blockquote>"Breathe air." - Anon.</blockquote>
+        <button onclick="changeQuote()">Change Quote</button>
+
+        <script>
+            var index = 0;
+
+            function changeQuote() {
+                var quotes = [
+                    `"Don't breathe air." -Anon.`,
+                    `"I am enjoying my time at HammerHacks!" - Dave Smith-Hayes.`,
+                    `"Dumptrucks!" - His son.`,
+                    `"Breathe air." - Anon.`
+                ];
+
+                alert("Hi! (This is for the dopamine hit)")
+
+                var blockquote = document.querySelector("blockquote");
+                blockquote.innerHTML = quotes[index];
+
+                index++;
+                if (index >= 4) {
+                    index = 0;
+                }
+            }
+        </script>
+        
     </body>
 </html>
