@@ -14,6 +14,7 @@
     background-color: #888;
     border-radius: 25px;
 }
+
 .motivate-modal{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */

@@ -35,6 +35,9 @@ function proceed(){
     document.getElementById("game").style.pointerEvents = "auto";
     document.getElementById("motivate-modal").style.display = "none";
 }
-
-takeBreak();
+try {
+    takeBreak();
+  }
+  catch(err) {
+  }
 setTimeout(function(){checkGame()}, 3000);

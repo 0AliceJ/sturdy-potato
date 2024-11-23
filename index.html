@@ -1,132 +1,146 @@
 <!DOCTYPE html>
 <html>
-    <!--This is a comment :(-->
-    <head>
-        <title>My Cool Website</title>
-        <link href="style.css" rel="stylesheet" type="text/css">
-        <style>
-            img {
-                width: 600px;
-                height: auto;
-            }
-            body {
-                height: 100vh;
-                background-color: lightblue; 
-                background-image: linear-gradient(to right, lightblue , DarkBlue);
+<!--This is a comment :(-->
 
-            }
-            h1 {
-                font-family: 'Lucida Handwriting', cursive;
-                background-color: lightcyan; 
-                padding: 10px;  /* Add padding around the text */
-                text-align: center; /* Center the text */
-                border-radius: 15px;
-                color: midnightblue
-                
-            }
-            h1::before {
-                content: "✨";
-            }
-            h1::after {
-                content: "✨";
-            }        
-            iframe {
-                width: 85%;
-                height: 30%;
-                padding-top: 30px;
-                border: none;
-            }
+<head>
+    <title>My Cool Website</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <style>
+        img {
+            width: 600px;
+            height: auto;
+        }
 
-            .right {
-                top: 80px;
-                float: right;
-                right: 50px;
-                z-index: 2;
-                position: fixed;
-            }
-            .rightToolbox {
-                top: 100px;
-                float: right;
-                right: 50px;
-                width: 25%;
-                z-index: 2;
-                position:fixed;
-            }
-            body{
-                overflow: visible
-            }
+        body {
+            height: 100vh;
+            background-color: lightblue;
+            background-image: linear-gradient(to right, lightblue, DarkBlue);
 
-        </style>
-    </head>
-    <body id = "website">
-        <h1>My Cool Website</h1>
-        <button onclick="showTools()" class="right">EduTools</button>
-        <p>I think HTML is neat!</p>
-        
-        <img src="https://static.vecteezy.com/system/resources/previews/024/646/930/non_2x/ai-generated-stray-cat-in-danger-background-animal-background-photo.jpg">
-        
-        <!--EduTools pop-up-->
-        <div class="rightToolbox" id="eduTools">
-            <iframe src="https://www.wordreference.com"></iframe>
-            <iframe src="https://www.desmos.com/calculator"></iframe>
+        }
 
-            <p>Working Interval</p>
-        <input type = "number" value = 20 id = "break-interval">
+        h1 {
+            font-family: 'Lucida Handwriting', cursive;
+            background-color: lightcyan;
+            padding: 10px;
+            /* Add padding around the text */
+            text-align: center;
+            /* Center the text */
+            border-radius: 15px;
+            color: midnightblue
+        }
+
+        h1::before {
+            content: "✨";
+        }
+
+        h1::after {
+            content: "✨";
+        }
+
+        iframe {
+            width: 85%;
+            height: 30%;
+            padding-top: 30px;
+            border: none;
+        }
+
+        .right {
+            top: 80px;
+            float: right;
+            right: 50px;
+            z-index: 2;
+            position: fixed;
+        }
+
+        .rightToolbox {
+            top: 100px;
+            float: right;
+            right: 50px;
+            width: 25%;
+            z-index: 2;
+            position: fixed;
+            background-color: CornflowerBlue;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        body {
+            overflow: visible
+        }
+    </style>
+</head>
+
+<body id="website">
+    <h1>My Cool Website</h1>
+    <button onclick="showTools()" class="right">EduTools</button>
+    <p>I think HTML is neat!</p>
+
+    <img
+        src="https://static.vecteezy.com/system/resources/previews/024/646/930/non_2x/ai-generated-stray-cat-in-danger-background-animal-background-photo.jpg">
+
+    <!--EduTools pop-up-->
+    <div class="rightToolbox" id="eduTools">
+        <iframe src="https://www.wordreference.com"></iframe>
+        <iframe src="https://www.desmos.com/calculator"></iframe>
+
+        <p>Working Interval</p>
+        <input type="number" value=20 id="break-interval">
         <button onclick="takeBreak()"> confirm </button>
         <p>Break Duration</p>
-        <input type = "number" value = 5 id = "break-duration">
+        <input type="number" value=5 id="break-duration">
         <button onclick="takeBreak()"> confirm </button>
-        </div>
+    </div>
 
-        <!--Quotes section-->
-        <blockquote>"Breathe air." - Anon.</blockquote>
-        <button onclick="changeQuote()">Change Quote</button>
+    <!--Quotes section-->
+    <blockquote>"Breathe air." - Anon.</blockquote>
+    <button onclick="changeQuote()">Change Quote</button>
 
-        <!--Take a break pop-up-->
-        <div class="break-modal" id = "break-modal">
-            <h2>"Hey! You've been working for a while now.</h2>
-            <h2>Don't forget to drink some water and fix your posture!";</h2>
-            <h2>It's not like you can do anything anyways ;)</h2>
-            <button id = "closeBtn" onclick= "closeModal()"> OK! </button>
-        </div>
-        
+    <!--Take a break pop-up-->
+    <div class="break-modal" id="break-modal">
+        <h2>"Hey! You've been working for a while now.</h2>
+        <h2>Don't forget to drink some water and fix your posture!";</h2>
+        <h2>It's not like you can do anything anyways ;)</h2>
+        <button id="closeBtn" onclick="closeModal()"> OK! </button>
+    </div>
 
-        <!--Import take a break script-->
-        <script src="script.js"></script>
-        <!--Run other script here-->
-        <script> 
-            /* This is a javascript comment */
-            /* EduTools toggle */
-            function showTools() {
-                var toolbox = document.getElementById("eduTools")
-                if (toolbox.style.display === "none") {
-                    toolbox.style.display = "block"
-                } else {
-                    toolbox.style.display = "none"
-                }
+
+    <!--Import take a break script-->
+    <script src="script.js"></script>
+    <!--Run other script here-->
+    <script>
+        /* This is a javascript comment */
+        /* EduTools toggle */
+        function showTools() {
+            var toolbox = document.getElementById("eduTools")
+            if (toolbox.style.display === "none") {
+                toolbox.style.display = "block"
+            } else {
+                toolbox.style.display = "none"
             }
+        }
 
-            /* Quote changes */
-            var index = 0;
-            function changeQuote() {
-                var quotes = [
-                    `"Don't breathe air." -Anon.`,
-                    `"I am enjoying my time at HammerHacks!" - Dave Smith-Hayes.`,
-                    `"Dumptrucks!" - His son.`,
-                    `"Breathe air." - Anon.`
-                ];
+        /* Quote changes */
+        var index = 0;
+        function changeQuote() {
+            var quotes = [
+                `"Don't breathe air." -Anon.`,
+                `"I am enjoying my time at HammerHacks!" - Dave Smith-Hayes.`,
+                `"Dumptrucks!" - His son.`,
+                `"Breathe air." - Anon.`
+            ];
 
-                alert("Hi! (This is for the dopamine hit)")
+            alert("Hi! (This is for the dopamine hit)")
 
-                var blockquote = document.querySelector("blockquote");
-                blockquote.innerHTML = quotes[index];
+            var blockquote = document.querySelector("blockquote");
+            blockquote.innerHTML = quotes[index];
 
-                index++;
-                if (index >= 4) {
-                    index = 0;
-                }
+            index++;
+            if (index >= 4) {
+                index = 0;
             }
-        </script>
-        
-    </body>
+        }
+    </script>
+
+</body>
+
 </html>
