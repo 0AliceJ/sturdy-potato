@@ -8,32 +8,60 @@
                 width: 600px;
                 height: auto;
             }
-
             h1 {
                 color: red;
+            }
+            iframe {
+                width: 85%;
+                height: 30%;
+                padding-top: 30px;
+                border: none;
+            }
+
+            .right {
+                float: right;
+            }
+            .rightToolbox {
+                float: right;
+                width: 25%;
+
             }
         </style>
     </head>
     <body>
         <h1>My Cool Website</h1>
+        <button onclick="showTools()" class="right">EduTools</button>
         <p>I think HTML is neat!</p>
-
+        
         <img src="https://static.vecteezy.com/system/resources/previews/024/646/930/non_2x/ai-generated-stray-cat-in-danger-background-animal-background-photo.jpg">
+        <div class="rightToolbox" id="eduTools">
+            <iframe src="https://www.wordreference.com"></iframe>
+            <iframe src="https://www.desmos.com/calculator"></iframe>
+        </div>
 
         <blockquote>"Breathe air." - Anon.</blockquote>
         <button onclick="changeQuote()">Change Quote</button>
+
         <div class="break-modal" id = "break-modal">
             <h2>"Hey! You've been working for a while now.</h2>
             <h2>Don't forget to drink some water and fix your posture!";</h2>
             <button onclick= "closeModal()"> OK! </button>
         </div>
-        How long should the break be?
+        <p>How long should the break be?</p>
         <input type = "number" id = "break-interval">
         <button onclick="takeBreak()"> confirm </button>
 
         <script src="script.js">
             var index = 0;
 
+            function showTools() {
+                var toolbox = document.getElementById("eduTools")
+                if (toolbox.style.display === "none") {
+                    toolbox.style.display = "block"
+                } else {
+                    toolbox.style.display = "none"
+                }
+            }
             function changeQuote() {
                 var quotes = [
                     `"Don't breathe air." -Anon.`,
