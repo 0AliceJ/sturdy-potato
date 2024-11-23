@@ -17,3 +17,16 @@ function closeModal(){
     setTimeout(function(){
         breakTime()}, timeInterval*60000);
 }
+
+function checkGame(){
+    if ((window.location.pathname.includes("Game")||window.location.pathname.includes("game"))&& !document.hidden){
+        document.getElementById("motivate-modal").style.display = "block";
+        document.getElementById("game").style.pointerEvents = "none";
+    }
+}
+function proceed(){
+    document.getElementById("game").style.pointerEvents = "auto";
+    document.getElementById("motivate-modal").style.display = "none";
+}
+
+checkGame();

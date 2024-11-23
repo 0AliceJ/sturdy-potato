@@ -6,6 +6,30 @@
     width: 80%;
     text-align: center;
 }
-body{
-    display:inline;
-}
+.motivate-modal{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    text-align: center;
+    background-color:white;
+    top:200px;
+    right: 300px;
+    left: 300px;
+    height: 200px; 
+    border-radius: 10px;
+    border: 5px solid #307bdd;
+    padding: 10px, 10px, 10px, 10px;
+    overflow: auto; /* Enable scroll if needed */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+  .game{
+      position: absolute;
+      height: 1000px;
+      width:100%;
+      
+  }
+  body{
+      display: inline-block;
+      height: 1000px;
+      overflow: hidden;
+  }
