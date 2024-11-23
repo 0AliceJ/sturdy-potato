@@ -1,10 +1,18 @@
+.closeBtn{
+    visibility: hidden;
+}
 .break-modal{
     display: none; /* Hidden by default */
-    margin: auto;
+    position: fixed;
+    z-index: 3;
+    top:200px;
+    right: 300px;
+    left: 300px;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
     text-align: center;
+    background-color: #888;
+    border-radius: 25px;
 }
 .motivate-modal{
     display: none; /* Hidden by default */
@@ -28,7 +36,7 @@
       width:100%;
       
   }
-  body{
+  .game-body{
       display: inline-block;
       height: 1000px;
       overflow: hidden;
