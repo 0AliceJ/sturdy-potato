@@ -1,4 +1,5 @@
 # sturdy-potato
+- For the HammerHacks 2024 hackathon!!
 - A chrome extension prototype by Ruby G., Ellie W., and Alice J.
 
 # Components
